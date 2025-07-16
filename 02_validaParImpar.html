@@ -6,10 +6,21 @@
     */
 
     //ENTRADA
-
+    let inteiro = prompt(`Informe um número inteiro.`)
     
     //PROCESSAMENTO
+    switch (inteiro % 2) {
+        case 0:
+            alert(`Seu número é par.`)
+            break;
+    
+        case 1:
+            alert(`Seu número é ímpar.`)
+            break;
 
+        default:
+            alert(`Dados Inválidos.`)    
+    }
     
     //SAÍDA
 
