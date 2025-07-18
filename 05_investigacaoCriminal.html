@@ -12,11 +12,34 @@
     */
 
     //ENTRADA
+    let telefonou = Number(prompt(`Telefonou para a vítima? 0 - Não, 1 - Sim.`));
+    let local = Number(prompt(`Esteve no local do crime?  0 - Não, 1 - Sim.`));
+    let moraPerto = Number(prompt(`Mora perto da vítima? 0 - Não, 1 - Sim.`));
+    let deve = Number(prompt(`Devia para a vítima? 0 - Não, 1 - Sim.`));
+    let trabalhou = Number(prompt(`Já trabalhou com a vítima? 0 - Não, 1 - Sim.`)); 
 
-    
     //PROCESSAMENTO
-
+    let total = telefonou + local + moraPerto + deve + trabalhou;
 
     //SAÍDA
+    
+    switch (total) { 
+        case 2:
+            alert(`Suspeita.`);
+            break
+        
+        case 3:
+        case 4: 
+            alert(`Cúmplice.`);
+            break
+
+        case 5:
+            alert(`Assassino`);
+            break
+    
+        default:
+            alert(`Inocente.`)
+            break
+    }
 
 </script>
