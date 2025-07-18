@@ -7,11 +7,76 @@
     */
 
     //ENTRADA
-    let hemisferio = prompt(`Informe em qual hemisfério você está.`);
-    let mes = prompt(`Informe o mês atual.`);
+    let hemisferio = prompt(`Informe em qual hemisfério você está.`).toLowerCase().trim();
+    let mes = prompt(`Informe o mês atual.`).toLowerCase().trim();
     
     //PROCESSAMENTO
+    switch (hemisferio) {
+        case "sul" :
+            switch (mes) {
+                case "dezembro":
+                case "janeiro":
+                case "fevereiro" :
+                    alert(`A estação do ano é verão.`);
+                    break;
+            
+                case "março":
+                case "abril":
+                case "maio" :
+                    alert(`A estação do ano é outono.`);
+                    break;
+
+                case "junho" :
+                case "julho" :
+                case "agosto" : 
+                    alert(`A estação do ano é inverno.`);
+                    break;
+                    
+                case "setembro" :
+                case "outubro" : 
+                case "novembro" :
+                    alert(`A estação do ano é primavera.`);
+                    break;  
+                  
+                default:
+                    alert(`Dados inválidos.`); 
+                    break;   
+            }    
+            break;
     
+        case "norte":
+            switch (mes) {
+                case "dezembro":
+                case "janeiro" :
+                case "fevereiro" :        
+                    alert(`A estação do ano é inverno.`);
+                    break;
+            
+                case "março" :
+                case "abril" :
+                case "maio" :
+                    alert(`A estação do ano é primavera.`);
+                    break;
+                
+                case "junho" :
+                case "julho" :
+                case "agosto" :
+                    alert(`A estação do ano é verão.`);
+                    break;
+                
+                case "setembro" :
+                case "outubro" :
+                case "novembro" :
+                    alert(`A estação do ano é outono`);
+                    break;
+
+                default:
+                    alert(`Dados inválidos.`);
+                    break;    
+
+            }
+            break;
+    }
     //SAÍDA
 
 </script>
